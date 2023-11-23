@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './login-page/index.html'
+          path: './login-page'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
