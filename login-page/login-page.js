@@ -19,5 +19,5 @@ loginBtn2.addEventListener('click', ()=>{
 function loginMethod(){
     console.log('Email: ' + document.getElementById('emailRegister').value);
     console.log('Password: ' + document.getElementById('passwordRegister').value);
-    window.location.href = '/main-page/main-page.html'
+    window.location.href = 'main-page.html'
 }
