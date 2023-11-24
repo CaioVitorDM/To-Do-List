@@ -61,11 +61,54 @@ body{
     display: flex;
 }
 
+.tasks-container{
+    overflow-y: scroll;
+    max-height: 450px;
+    border-radius: 30px;
+}
+
 .task{
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    align-items: flex-start; /* Align items to the start */
+    gap: 5px;
+    margin-right: 2%;
+}
+
+.task-info{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
+
+
+.task-date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.task-date p{
+    font-size: 12px;
+    margin-left: 8%;
+}
+
+.urgencia{
+    display: flex;
+    border: none;
+    background-color: #512da8;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 3px;
+    padding-right: 10px;
+    margin-left: auto;
+}
+
 
 .task button{
     background: transparent;
@@ -101,5 +144,25 @@ body{
     background-color: #512da8;
     border-radius: 50%;
     margin-right: 10px;
-    margin-left: 4%;
+    margin-left: 2%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c9d6ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
