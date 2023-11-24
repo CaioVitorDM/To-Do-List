@@ -6,6 +6,7 @@ function completeTask(checkbox) {
     if (checkbox.checked) {
         // Move the task to the completed section
         completedTasksContainer.appendChild(task);
+        task.classList.add("completed");
         if (separator) {
             separator.remove();
             completedTasksContainer.appendChild(separator);
@@ -14,6 +15,7 @@ function completeTask(checkbox) {
     else {
         // Move the task back to the normal tasks
         const tasksContainer = document.querySelector('.tasks-container');
+        task.classList.remove("completed");
         tasksContainer.appendChild(task);
         if(separator){
             separator.remove();
