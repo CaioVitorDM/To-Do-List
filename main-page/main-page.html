@@ -13,7 +13,7 @@
         <div class="to-do-container">
             <div class="header">
                 <h2>
-                    Backlog Tasks
+                    TaskBoard
                 </h2>
                 <button> <i class="fa-solid fa-plus"></i> </button>
             </div>
@@ -23,8 +23,7 @@
             <div class="tasks-container">
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -35,7 +34,6 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
@@ -46,8 +44,7 @@
 
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -58,53 +55,6 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
-                        <div class="urgencia">
-                            <p>Urgente</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="task">
-                    <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
-                        <p>Entrega do projeto - Web 1</p>
-
-                        <div class="button-container">
-                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
-                            <button><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="task-date">
-                        <p id="due-date">Due Date: 28/11/2023</p>
-
-                        <div class="urgencia">
-                            <p>Normal</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="task">
-                    <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
-                        <p>Entrega do projeto - Web 1</p>
-
-                        <div class="button-container">
-                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
-                            <button><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="task-date">
-                        <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
@@ -115,8 +65,7 @@
 
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -127,7 +76,6 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
@@ -138,8 +86,7 @@
 
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -150,7 +97,6 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
@@ -161,8 +107,7 @@
 
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -173,7 +118,6 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
@@ -184,8 +128,7 @@
 
                 <div class="task">
                     <div class="task-info">
-                        <div class="task-dot"> 
-                        </div>
+                        <input type="checkbox" onchange="completeTask(this)">
                         <p>Entrega do projeto - Web 1</p>
 
                         <div class="button-container">
@@ -196,29 +139,377 @@
 
                     <div class="task-date">
                         <p id="due-date">Due Date: 28/11/2023</p>
-
                         <div class="urgencia">
                             <p>Muito Urgente</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="to-do-container">
-            <h2>
-                Ongoing Tasks
-            </h2>
-        </div>
-    </div>
+                <div class="separator"></div>
 
-    <div class="container">
-        <div class="to-do-container">
-            <h2>
-                Finished Tasks
-            </h2>
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="task">
+                    <div class="task-info">
+                        <input type="checkbox" onchange="completeTask(this)">
+                        <p>Entrega do projeto - Web 1</p>
+
+                        <div class="button-container">
+                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="task-date">
+                        <p id="due-date">Due Date: 28/11/2023</p>
+                        <div class="urgencia">
+                            <p>Muito Urgente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <details class="completed-tasks-details">
+                    <summary>Concluídas</summary>
+                    <div class="completed-tasks-container">
+                        <!-- Completed tasks will be moved here -->
+                    </div>
+                </details>
         </div>
     </div>
 
