@@ -1,3 +1,4 @@
+/*
 function completeTask(checkbox) {
     const task = checkbox.closest('.task');
     const completedTasksContainer = document.querySelector('.completed-tasks-container');
@@ -34,4 +35,20 @@ function completeTask(checkbox) {
 
     // Ensure details is the last element
     document.querySelector('.to-do-container').appendChild(document.querySelector('.completed-tasks-details'));
+}*/
+
+function completeTask(checkbox) {
+    const task = checkbox.closest('.task');
+    const separator = task.nextElementSibling;
+
+    if (checkbox.checked) {
+        setTimeout(() => {
+            task.remove();
+            separator.remove();
+        }, 150); // 500 milissegundos de atraso
+    }
+}
+
+function createTask(){
+    window.location.href = '../create-task/create-task.html';
 }
