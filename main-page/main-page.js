@@ -68,6 +68,10 @@ function getAllTasks() {
     }
 }
 
+function redirectEdit(id){
+    window.location.href = '../create-task/create-task.html?id=' + id;
+}
+
 function loadTasksIntoTable() {
     const tasksContainer = document.querySelector('.tasks-container');
 
@@ -90,8 +94,7 @@ function loadTasksIntoTable() {
                         <p>${tasks[i].title}</p>
 
                         <div class="button-container">
-                            <button> <i class="fa-regular fa-pen-to-square"> </i></button>
-                            <button><i class="fa-solid fa-trash"></i></button>
+                            <button onclick="redirectEdit(${tasks[i].id})"> <i class="fa-regular fa-pen-to-square"> </i></button>
                         </div>
                     </div>
 
