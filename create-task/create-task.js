@@ -1,6 +1,7 @@
 let lastUsedID = localStorage.getItem('lastUsedID') || 0;
 
 const task = {
+    'id': null,
     'title': '',
     'dueDate': '',
     'urgencyLevel': ''
@@ -18,8 +19,11 @@ function saveTask(event){
     task.urgencyLevel = taskUrgency.value;
 
     lastUsedID++;
+    task.id = lastUsedID;
     localStorage.setItem('lastUsedID', lastUsedID);
     localStorage.setItem(lastUsedID, JSON.stringify(task));
+
+    window.location.href = '../main-page/main-page.html';
 
 }
 

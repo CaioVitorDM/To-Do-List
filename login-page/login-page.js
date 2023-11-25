@@ -1,23 +1,78 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
-const loginBtn2 = document.getElementById('loginButton')
 
-registerBtn.addEventListener('click', ()=>{
+document.getElementById('loginForm').addEventListener('submit', loginMethod);
+document.getElementById('signUpForm').addEventListener('submit', signUpMethod);
+
+let users = [];
+
+function getAllUsers(){
+    const usersString = localStorage.getItem('users');
+
+    if (usersString) {
+        users = JSON.parse(usersString);
+    }
+}
+
+function saveUsersToLocalStorage() {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 })
 
-loginBtn.addEventListener('click', ()=>{
+loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 })
 
-loginBtn2.addEventListener('click', ()=>{
-    loginMethod();
-})
+function signUpMethod(event) {
+    event.preventDefault();
 
+    let name = document.getElementById('nameSignUp').value;
+    let email = document.getElementById('emailSignUp').value;
+    let password = document.getElementById('passwordSignUp').value;
 
-function loginMethod(){
-    console.log('Email: ' + document.getElementById('emailRegister').value);
-    console.log('Password: ' + document.getElementById('passwordRegister').value);
-    window.location.href = '../main-page/main-page.html';
+    let newUser = {
+        'name': name,
+        'email': email,
+        'password': password
+    };
+
+    if (!Array.isArray(users)) {
+        users = []; // Inicializa como um array se ainda não for
+    }
+
+    users.push(newUser); // Adiciona o novo usuário ao array
+    saveUsersToLocalStorage(); // Salva o array atualizado no localStorage
+
+    container.classList.remove("active");
+}
+
+function loginMethod(event) {
+    event.preventDefault();
+    let email = document.getElementById('emailLogin').value;
+    let password = document.getElementById('passwordLogin').value;
+
+    if (loginAuth(email, password)) {
+        window.location.href = '../main-page/main-page.html';
+    } else {
+        container.classList.add("active");
+    }
+}
+
+function loginAuth(email, password) {
+    for (let i = 0; i < users.length; i++) {
+        console.log(users[i]);
+        if (users[i].email === email && users[i].password === password) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+window.onload = function () {
+    getAllUsers();
 }
