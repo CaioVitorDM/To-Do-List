@@ -47,7 +47,7 @@ function completeTask(checkbox) {
         setTimeout(() => {
             task.remove();
             separator.remove();
-            localStorage.removeItem(task.id)
+            sessionStorage.removeItem(task.id)
         }, 150); // 500 milissegundos de atraso
     }
 }
@@ -57,11 +57,11 @@ function createTask() {
 }
 
 function getAllTasks() {
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
+    for (let i = 0; i < sessionStorage.length; i++) {
+        const key = sessionStorage.key(i);
 
         if (key !== 'lastUsedID' && key !== 'users') {
-            const value = localStorage.getItem(key);
+            const value = sessionStorage.getItem(key);
 
             tasks.push(JSON.parse(value));
         }

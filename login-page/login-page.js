@@ -8,15 +8,15 @@ document.getElementById('signUpForm').addEventListener('submit', signUpMethod);
 let users = [];
 
 function getAllUsers(){
-    const usersString = localStorage.getItem('users');
+    const usersString = sessionStorage.getItem('users');
 
     if (usersString) {
         users = JSON.parse(usersString);
     }
 }
 
-function saveUsersToLocalStorage() {
-    localStorage.setItem('users', JSON.stringify(users));
+function saveUsersTosessionStorage() {
+    sessionStorage.setItem('users', JSON.stringify(users));
 }
 
 registerBtn.addEventListener('click', () => {
@@ -45,7 +45,7 @@ function signUpMethod(event) {
     }
 
     users.push(newUser); // Adiciona o novo usuário ao array
-    saveUsersToLocalStorage(); // Salva o array atualizado no localStorage
+    saveUsersTosessionStorage(); // Salva o array atualizado no sessionStorage
 
     container.classList.remove("active");
 }
