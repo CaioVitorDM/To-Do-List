@@ -1,4 +1,5 @@
 const User = require('../models/userModel');
+const bcrypt = require('bcrypt');
 
 function registerUser(req, res) {
 
@@ -36,12 +37,19 @@ function loginUser(req, res) {
       return;
     }
 
-    if (!user || user.password !== password) {
+    if (!user) {
       res.status(401).json({ message: 'E-mail ou senha inválidos' });
       return;
     }
-
-    res.status(200).json({ message: 'Login realizado com sucesso', user });
+  
+    bcrypt.compare(password, user.password, (err, result) => {
+      if (err || !result) {
+        res.status(401).json({ message: 'E-mail ou senha inválidos' });
+        return;
+      }
+  
+      res.status(200).json({ message: 'Login realizado com sucesso', user });
+    });
   });
 }
 

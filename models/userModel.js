@@ -1,4 +1,5 @@
 const db = require('../config/db.js');
+const bcrypt = require('bcrypt');
 
 class User {
     constructor(id, name, email, password) {
@@ -17,15 +18,32 @@ class User {
     }
 
     static create(newUser, callback) {
-      db.query('INSERT INTO todolist.users SET ?', newUser, (err, result) => {
+      bcrypt.genSalt(10, (err, salt) => {
         if (err) {
-          callback(err, null);
-          return;
+            callback(err, null);
+            return;
         }
 
-        newUser.id = result.insertId;
-        callback(null, newUser);
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          
+          if (err) {
+              callback(err, null);
+              return;
+          }
+
+          newUser.password = hash;
+
+        db.query('INSERT INTO todolist.users SET ?', newUser, (err, result) => {
+          if (err) {
+            callback(err, null);
+            return;
+          }
+
+          newUser.id = result.insertId;
+          callback(null, newUser);
+        });
       });
+     });
     }
   
     static findByEmail(email, callback) {

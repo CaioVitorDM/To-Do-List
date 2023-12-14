@@ -62,10 +62,12 @@ async function loginMethod(event) {
     })
     .then(data => {
         localStorage.setItem('userId', data.user.id);
+        alert("Login realizado com sucesso");
         window.location.href = 'main-page.html';
     })
     .catch(error => {
+        alert("E-mail ou senha inválidos");
         console.error(error);
-        container.classList.add("active");
+        //container.classList.add("active");
     });
 }
