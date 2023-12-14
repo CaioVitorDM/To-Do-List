@@ -18,30 +18,26 @@ To-Do List developed to the Web Systems Development 1 at Digital Metropole Insti
   - Username: root
   - Password: 123456
   - Tables:
-    ```
-    CREATE TABLE `users` (
-      `id` int NOT NULL AUTO_INCREMENT,
-      `name` varchar(250) NOT NULL,
-      `email` varchar(250) NOT NULL,
-      `password` varchar(250) NOT NULL,
-      PRIMARY KEY (`id`),
-      UNIQUE KEY `username_UNIQUE` (`email`),
-      UNIQUE KEY `idUsers_UNIQUE` (`id`)
-    ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+    
+  ```
+   CREATE TABLE todolist.users (
+      id INT NOT NULL AUTO_INCREMENT,
+      name VARCHAR(250) NOT NULL,
+      email VARCHAR(250) NOT NULL,
+      password VARCHAR(250) NOT NULL,
+      PRIMARY KEY (`id`)
+    );
     ```
     ```
-    CREATE TABLE `tasks` (
-      `id` int NOT NULL AUTO_INCREMENT,
-      `title` varchar(250) NOT NULL,
-      `dueDate` varchar(45) NOT NULL,
-      `urgency` varchar(45) NOT NULL,
-      `userId` int NOT NULL,
-      PRIMARY KEY (`id`),
-      UNIQUE KEY `id_UNIQUE` (`id`),
-      KEY `userId_idx` (`userId`),
-      CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
-    ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    CREATE TABLE todolist.tasks (
+      id INT NOT NULL AUTO_INCREMENT,
+      title VARCHAR(45) NOT NULL,
+      dueDate VARCHAR(45) NOT NULL,
+      urgency VARCHAR(45) NOT NULL,
+      userId INT NOT NULL,
+      PRIMARY KEY (id),
+      FOREIGN KEY (userId) REFERENCES users(id)
+    );
     ```
 - Run `node server.js`
 - The project will open here: http://localhost:3000/
