@@ -42,6 +42,7 @@ async function saveTask(event) {
             })
             .then(data => {
                 console.log(data);
+                window.location.href = 'main-page.html';
             })
             .catch(error => {
                 console.error(error);
