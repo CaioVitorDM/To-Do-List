@@ -6,9 +6,16 @@ To-Do List developed to the Web Systems Development 1 at Digital Metropole Insti
 - HTML
 - CSS
 - JavaScript
+- Node.js
+- Express
 
-# Notes
+# Getting Started
 
-This only works using basic javascript for maneging data on session storage. You can ask yourself "why not to use a real back-end
-and database?", because, my fellow programmer (or normal person), that is the second part of the project, which I hope, by the time
-you'll be reading this, will be finished and published on my github.
+- Install `npm` 
+- Download the project: `git clone https://github.com/CaioVitorDM/To-Do-List.git`
+- Configure a MySQL database
+  - Name: todolist
+  - Username: root
+  - Password: 123456
+- Run `node server.js`
+- The project will open here: http://localhost:3000/
