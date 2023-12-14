@@ -17,8 +17,17 @@ class Task {
     this.title = title;
   }
 
+  static get(taskId, callback) {
+    db.query('SELECT * FROM todolist.tasks WHERE id = ?', [taskId], (err, rows) => {
+      if (err) {
+        return callback(err, null);
+      }
+      callback(null, rows[0]);
+    });
+  }   
+
   static getAllTasks(userId, callback) {
-    db.query('SELECT * FROM tasks WHERE userId = ?', [userId], (err, rows) => {
+    db.query('SELECT * FROM todolist.tasks WHERE userId = ?', [userId], (err, rows) => {
       if (err) {
         return callback(err, null);
       }
@@ -37,6 +46,17 @@ class Task {
       callback(null, newTask);
     });
   }
+
+  static update(newTask, callback) {
+    db.query('UPDATE todolist.tasks SET ? WHERE id = ?', [newTask, newTask.id], (err, result) => {
+      if (err) {
+        callback(err, null);
+        return;
+      }
+  
+      callback(null, newTask);
+    });
+  }  
 
   static complete(id, callback) {
     db.query('DELETE FROM todolist.tasks WHERE id = ?', [id], (err, result) => {
