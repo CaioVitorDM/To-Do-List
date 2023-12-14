@@ -17,4 +17,5 @@ To-Do List developed to the Web Systems Development 1 at Digital Metropole Insti
   - Name: todolist
   - Username: root
   - Password: 123456
-- The project will run here: http://localhost:3000/
+- Run `node server.js`
+- The project will open here: http://localhost:3000/
